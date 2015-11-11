@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Início</title>
+    </h:head>
+    <h:body>
+
+        <f:view>
+
+            <h:form>
+
+                <p:layout fullPage="true">
+
+                    <p:dialog header="Sobre" draggable="false"  modal="true"   widgetVar="dlg2" height="220" resizable="false">
+                        <h:outputText escape="false" value="Sistema de Alocação Didática do CMCC" /> <br/>
+                        <h:outputText escape="false" value="Desenvolvido no CMCC-UFABC" /> <br/>
+                        <h:outputText escape="false" value="Coordenação: " /> <br/>
+                        <h:outputText escape="false" value="Prof. André G. R Balan" /> <br/>
+                        <h:outputText escape="false" value="Prof. Edson Pinheiro Pimentel" /> <br/>
+                        <h:outputText escape="false" value="Prof. Marcelo Bussotti Reyes" /> <br/><br/>
+                        <h:outputText escape="false" value="Desenvolvimento:" /> <br/>
+                        <h:outputText escape="false" value="André G. R Balan (andre.balan@ufabc.edu.br)" /> <br/>
+                        <h:outputText escape="false" value="Juliana Calió (juliana.calio@aluno.ufabc.edu.br)" /> <br/>
+                        <h:outputText escape="false" value="Vinicius Pavia (vcpavia@aluno.ufabc.edu.br)" /> <br/><br/>
+                        <h:outputText escape="false" value="Colaboradores:" /> <br/>
+                        <h:outputText escape="false" value="Elaine Konno Rocha" /> <br/>
+
+                    </p:dialog>
+
+                    <p:layoutUnit style="text-align:center" position="north" size="100"  resizable="true" closable="true" collapsible="true" >  
+                        <h:commandLink   onclick="PF('dlg2').show();
+                                return false;" value="Sobre" 
+                                         style="position: relative; right: 650px ;color: #2E8B57; top: 10px"></h:commandLink>
+
+                        <h:commandLink value="Logout" style="position: relative; left: 650px; top: 10px; color: #2E8B57" 
+                                       action="#{loginBean.doLogout()}" immediate="true"/>
+                        <div style="color: #2E8B57 ;font-family: 'Play', serif;font-size: 24px; position: relative; top: 10px">Sistema de Alocação Didática do CMCC</div>
+
+                    </p:layoutUnit> 
+
+
+                    <p:layoutUnit position="center">
+
+                        <p:panelMenu style="width:360px; height: 300px; text-align: justify; 
+                                     position: relative; left: 500px;top: 100px">
+                            <p:submenu label="Disponibilidade">
+                                <p:menuitem value="Definir Disponibilidade" action="Disponibilidade/Definir.xhtml" icon="ui-icon-pencil"/>
+                            </p:submenu>
+                         </p:panelMenu>
+                    </p:layoutUnit>
+
+                </p:layout>
+
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+
